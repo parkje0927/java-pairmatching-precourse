@@ -130,7 +130,7 @@ public class PairMatchService {
             startIndex += 2;
 
             //3명씩 짝 짓는 경우
-            if (i + 2 == crewListForCourse.size() - 1) {
+            if (startIndex == crewListForCourse.size() - 1) {
                 pair.addThirdCrew(crewListForCourse.get(i + 2));
                 startIndex += 1;
             }
@@ -141,7 +141,7 @@ public class PairMatchService {
 
             pairs.add(pair);
 
-            if (startIndex == crewListForCourse.size()) {
+            if (startIndex >= crewListForCourse.size()) {
                 break;
             }
         }
