@@ -11,8 +11,8 @@ public class Pair {
         this.crews = new ArrayList<>();
     }
 
-    public void formPairsOfTwo(Crew fistCrew, Crew secondCrew) {
-        crews.add(fistCrew);
+    public void formPairsOfTwo(Crew firstCrew, Crew secondCrew) {
+        crews.add(firstCrew);
         crews.add(secondCrew);
     }
 
