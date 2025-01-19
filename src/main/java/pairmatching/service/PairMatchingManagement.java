@@ -12,11 +12,17 @@ import java.util.Set;
 public class PairMatchingManagement {
 
     private final Scanner scanner = new Scanner(System.in);
-    private final Map<Course, Map<Level, Set<Pair>>> matchingHistory = new HashMap<>();
 
-    private final PairMatchService pairMatchService = new PairMatchService(scanner, matchingHistory);
-    private final PairSelectService pairSelectService = new PairSelectService(scanner, matchingHistory);
-    private final PairResetService pairResetService = new PairResetService(matchingHistory);
+    private final PairMatchService pairMatchService;
+    private final PairSelectService pairSelectService;
+    private final PairResetService pairResetService;
+
+    public PairMatchingManagement() {
+        Map<Course, Map<Level, Set<Pair>>> matchingHistory = new HashMap<>();
+        this.pairMatchService = new PairMatchService(scanner, matchingHistory);
+        this.pairSelectService = new PairSelectService(scanner, matchingHistory);
+        this.pairResetService = new PairResetService(matchingHistory);
+    }
 
     public void run() {
         String programOption = """
