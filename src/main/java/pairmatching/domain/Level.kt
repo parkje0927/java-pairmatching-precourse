@@ -11,7 +11,8 @@ enum class Level(val levelName: String) {
     companion object {
         fun fromString(levelName: String?): Level {
             for (level in entries) {
-                if (level.levelName.equals(levelName, ignoreCase = true)) {
+                //Level 클래스에만 코멘트 참고해서 방법 변경해보았음.
+                if (level.levelName.lowercase() == levelName?.lowercase()) {
                     return level
                 }
             }
