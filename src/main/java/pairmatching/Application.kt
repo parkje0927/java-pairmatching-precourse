@@ -1,10 +1,12 @@
 package pairmatching
 
-import org.springframework.boot.runApplication
+import pairmatching.service.PairMatchingManagement
 
 class Application
 
 fun main(args: Array<String>) {
-    runApplication<Application>(*args)
+
+    val pairMatchingManagement = PairMatchingManagement()
+    pairMatchingManagement.run()
 }
 
