@@ -19,7 +19,6 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.woowacourse-projects:mission-utils:1.0.0")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
